@@ -53,11 +53,11 @@ class MinesweeperView(tk.Tk):
 
     def win_notify(self):
         """Вызывает модальное окно уведомлением о победе"""
-        return self.modal_instance().notification("You won.")
+        return self.modal_instance().notification("You have won.")
 
     def lose_notify(self):
         """Вызывает модальное окно уведомлением о поражении"""
-        return self.modal_instance().notification("You have a lose.")
+        return self.modal_instance().notification("You have lost.")
 
     def paused_notify(self):
         """Вызывает модальное окно паузы, блокирует интерфейс"""
