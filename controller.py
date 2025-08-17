@@ -68,6 +68,7 @@ class MinesweeperController:
 
         if self.model.get_game_status() and not self.view.new_game_notify():
             return
+        self.view.withdraw()
         current_difficulty = self.view.top_panel.difficulty_box.get()
         self.model.set_difficulty(current_difficulty)
         self.new_game_handler(event)
