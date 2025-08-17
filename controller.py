@@ -12,6 +12,7 @@ class MinesweeperController:
         """
         Обработчик закрытия программы
         """
+        self.view.withdraw()
         self.model.save_settings()
         self.view.destroy()
 
@@ -62,6 +63,7 @@ class MinesweeperController:
         """
         Обработчик событий с combobox на top panel, устанавливает выбранный уровень сложности
         """
+        self.view.withdraw()
         self.view.top_panel.difficulty_box.selection_clear()
 
         if self.model.get_game_status() and not self.view.new_game_notify():
@@ -70,6 +72,7 @@ class MinesweeperController:
         self.model.set_difficulty(current_difficulty)
         self.new_game_handler(event)
         self.view.update_window_size()
+        self.view.deiconify()
 
     def left_click_handler(self, button):
         """

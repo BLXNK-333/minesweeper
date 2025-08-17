@@ -11,6 +11,7 @@ class MinesweeperView(tk.Tk):
 
     def __init__(self, controller):
         super().__init__()
+        self.withdraw()
         self.controller = controller
         self.modal = None
         self.title("Minesweeper")
@@ -24,6 +25,7 @@ class MinesweeperView(tk.Tk):
         self.game_field.make_all_buttons()
         self.update_window_size()
         self.bottom_panel.timer.update_timer()
+        self.deiconify()
 
     def update_window_size(self) -> None:
         """Обновляет размер главного окна при старте или при растягивании"""
