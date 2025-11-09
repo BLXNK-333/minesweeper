@@ -63,7 +63,6 @@ class MinesweeperController:
         """
         Обработчик событий с combobox на top panel, устанавливает выбранный уровень сложности
         """
-        self.view.withdraw()
         self.view.top_panel.difficulty_box.selection_clear()
 
         if self.model.get_game_status() and not self.view.new_game_notify():
