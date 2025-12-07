@@ -546,7 +546,7 @@ class GameField(ttk.Frame):
 class GameFieldButton(ttk.Button):
     """Кнопки для игрового поля"""
 
-    mark = "💣"
+    mark = "⚑"
     error = "❌"
 
     style_map = {
